@@ -16,7 +16,7 @@ void main(string[] args)
     bool euler = false;
     getopt(
             args,
-            "euler",  &euler,    // numeric
+            "euler",  &euler
           );
 
     auto max = 100000000L;
