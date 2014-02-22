@@ -3,14 +3,6 @@ import std.getopt;
 import std.math;
 import std.conv;
 
-bool contains(int target,int[] array){
-    writeln(target);
-    if({foreach(i;array) if(i==target) return true; return false;}())
-        return true;
-    else
-        return false;
-}
-
 void main(string[] args)
 {
     bool euler = false;
