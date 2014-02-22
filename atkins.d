@@ -111,7 +111,9 @@ void main()
     foreach (i;2 .. max) {
         if (array[i]) {
             pi++;
-            writeln(i);
+            writeln(to!string(pi) ~ "\t\t\t" ~ to!string(i));
+            if(pi == 10001)
+                break;
         }
     }
 }
