@@ -1,4 +1,5 @@
 import std.stdio;
+import std.getopt;
 import std.math;
 import std.conv;
 
@@ -10,8 +11,13 @@ bool contains(int target,int[] array){
         return false;
 }
 
-void main()
+void main(string[] args)
 {
+    bool euler = false;
+    getopt(
+            args,
+            "euler",  &euler,    // numeric
+          );
 
     auto max = 100000000L;
     auto PrimeI = 1;
@@ -112,7 +118,7 @@ void main()
         if (array[i]) {
             pi++;
             writeln(to!string(pi) ~ "\t\t\t" ~ to!string(i));
-            if(pi == 10001)
+            if(euler && pi == 10001)
                 break;
         }
     }
